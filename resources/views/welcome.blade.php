@@ -14,19 +14,19 @@
 
             <div class="row">
 
+                @foreach ($categories as $category)
+                    <div class="col-lg-4 col-md-6 text-center">
+                        <div class="single-product-item">
+                            <div class="product-image">
+                                <a href="/product"><img src="{{ $category->imagePath }}"
+                                        style="width: 200px; height: 200px;" alt=""></a>
+                            </div>
+                            <h3>{{ $category->name }}</h3>
 
-                <div class="col-lg-4 col-md-6 text-center">
-                    <div class="single-product-item">
-                        <div class="product-image">
-                            <a href="single-product.html"><img src="assets/img/products/product-img-1.jpg"
-                                    alt=""></a>
+
                         </div>
-                        <h3>Strawberry</h3>
-
-
                     </div>
-                </div>
-
+                @endforeach
 
             </div>
         </div>
